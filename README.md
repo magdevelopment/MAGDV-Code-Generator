@@ -1,4 +1,4 @@
-# MAG Development Viper Module Templates
+# MAG Development Templates
 
 
 #### Install
