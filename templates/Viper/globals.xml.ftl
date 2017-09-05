@@ -7,6 +7,6 @@
 
     <global id="moduleNameLowerCase" value="${moduleName?lower_case}" />
     <global id="moduleNameCamelCase" value="${moduleName?uncap_first}" />
-    <global id="moduleTypeUpperCase" value="${moduleType}?cap_first}" />
+    <global id="moduleTypeUpperCase" value="${moduleType?cap_first}" />
 
 </globals>

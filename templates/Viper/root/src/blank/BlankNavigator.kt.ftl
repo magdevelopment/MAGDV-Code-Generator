@@ -1,14 +1,14 @@
-package com.magdv.express.courier.presentation.blank
+package ${packageName}.${subPackage}
 
 import android.content.Context
 import android.content.Intent
 import android.support.v4.app.Fragment
-import com.magdv.express.courier.R
-import com.magdv.express.courier.presentation.common.BaseNavigator
+import ${applicationPackage}.R
+import ${applicationPackage}.presentation.common.BaseNavigator
 import javax.inject.Inject
 
 
-class BlankNavigator @Inject constructor(activity: BlankActivity) : BaseNavigator(activity, R.id.content) {
+class ${moduleName}Navigator @Inject constructor(activity: ${moduleName}Activity) : BaseNavigator(activity, R.id.content) {
 
     override fun createIntent(context: Context, screenName: String, transferData: Any?): Intent? {
         return when (screenName) {

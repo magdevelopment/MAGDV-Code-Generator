@@ -1,25 +1,23 @@
-package com.magdv.express.courier.presentation.blank
+package ${packageName}.${subPackage}
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.View
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
-import com.magdv.express.courier.R
-import com.magdv.express.courier.presentation.authentication.login.LoginFragment
-import com.magdv.express.courier.presentation.authentication.login.LoginPresenter
-import com.magdv.express.courier.presentation.common.Layout
-import com.magdv.express.courier.presentation.common.viper.AbstractViperFragment
+import ${applicationPackage}.R
+import ${applicationPackage}.presentation.common.Layout
+import ${applicationPackage}.presentation.common.viper.AbstractViperFragment
 
 //TODO Don't forget to register in ActivityModule
 @Layout(R.layout.fragment_login)
-class BlankFragment : AbstractViperFragment<LoginPresenter>(), IBlankView {
+class ${moduleName}Fragment : AbstractViperFragment<${moduleName}Presenter>(), I${moduleName}View {
 
     @InjectPresenter
-    lateinit var presenter: LoginPresenter
+    lateinit var presenter: ${moduleName}Presenter
 
     @ProvidePresenter
-    override fun providePresenter(): LoginPresenter {
+    override fun providePresenter(): ${moduleName}Presenter {
         return presenterProvider.get()
     }
 
@@ -34,7 +32,7 @@ class BlankFragment : AbstractViperFragment<LoginPresenter>(), IBlankView {
 
     companion object {
         fun newInstance(): Fragment {
-            return LoginFragment()
+            return ${moduleName}Fragment()
         }
     }
 }
