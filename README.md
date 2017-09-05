@@ -3,7 +3,7 @@
 
 #### Install
 
-Copy folders from templates folder into **ANDROID_STUDIO_DIR\plugins\android\lib\templates\other\**
+Copy folders from templates folder into **ANDROID_STUDIO_DIR\plugins\android\lib\templates\other\\**
 
 #### Templates using
 
