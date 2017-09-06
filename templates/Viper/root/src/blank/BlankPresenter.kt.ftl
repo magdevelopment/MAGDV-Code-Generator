@@ -3,9 +3,9 @@ package ${packageName}.${subPackage}
 import com.arellomobile.mvp.InjectViewState
 <#if moduleType == "fragment">
 import ${applicationPackage}.infrastructure.errors.ErrorResolver
-import ${applicationPackage}.infrastructure.injection.Scopes.FragmentScope
+import ${applicationPackage}.infrastructure.injection.scopes.FragmentScope
 <#elseif moduleType == "activity">
-import ${applicationPackage}.infrastructure.injection.Scopes.ActivityScope
+import ${applicationPackage}.infrastructure.injection.scopes.ActivityScope
 </#if>
 import ${applicationPackage}.presentation.common.viper.AbstractViperPresenter
 import javax.inject.Inject
