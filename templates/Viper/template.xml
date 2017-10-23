@@ -25,13 +25,14 @@
         help="Module sub package" />
 
     <parameter
-        id="moduleType"
-        name="Module Type"
+        id="viewType"
+        name="View"
         type="enum"
-        default="fragment"
-        help="Module type" >
-        <option id="fragment">Fragment</option>
+        default="activity"
+        help="View parent class" >
         <option id="activity">Activity</option>
+        <option id="fragment">Fragment</option>
+        <option id="dialog">DialogFragment</option>
     </parameter>
 
     <globals file="globals.xml.ftl" />

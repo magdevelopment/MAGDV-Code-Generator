@@ -1,18 +1,18 @@
 package ${packageName}.${subPackage}
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import android.support.v4.app.DialogFragment
 import android.view.View
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import ${applicationPackage}.R
 import ${applicationPackage}.presentation.common.Layout
-import ${applicationPackage}.presentation.common.viper.AbstractViperFragment
+import ${applicationPackage}.presentation.common.viper.AbstractViperDialogFragment
 
 //TODO Don't forget to register in ActivityModule
-@Layout(R.layout.fragment)
-class ${moduleName}Fragment : AbstractViperFragment<${moduleName}Presenter>(),
-                              I${moduleName}View {
+@Layout(R.layout.dialog)
+class ${moduleName}DialogFragment : AbstractViperDialogFragment<${moduleName}Presenter>(),
+                                    I${moduleName}View {
 
     @InjectPresenter
     lateinit var presenter: ${moduleName}Presenter
@@ -32,8 +32,11 @@ class ${moduleName}Fragment : AbstractViperFragment<${moduleName}Presenter>(),
     }
 
     companion object {
-        fun newInstance(): Fragment {
-            return ${moduleName}Fragment()
+        //TODO Provide Dialog TAG
+        const val TAG = ""
+
+        fun newInstance(): DialogFragment {
+            return ${moduleName}DialogFragment()
         }
     }
 }
