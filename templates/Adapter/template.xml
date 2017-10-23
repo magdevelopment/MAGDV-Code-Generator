@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="1"
+    name="RecyclerView's Adapter"
+    description="Creates a new RecyclerView's Adapter">
+
+    <category value="MAGDV" />
+
+    <parameter
+        id="moduleName"
+        name="Module Name"
+        type="string"
+        constraints="nonempty|class|unique"
+		    default="Blank"
+        help="The name of the module" />
+
+    <parameter
+        id="modelName"
+        name="Model Class"
+        type="string"
+        constraints="nonempty|class"
+        default="Blank"
+        help="The name of the model class" />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
