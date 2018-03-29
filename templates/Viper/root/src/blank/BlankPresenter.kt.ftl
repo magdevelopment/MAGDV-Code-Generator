@@ -14,7 +14,9 @@ import javax.inject.Inject
 @<#if viewType == "activity">ActivityScope<#else>FragmentScope</#if>
 @InjectViewState
 class ${moduleName}Presenter @Inject constructor(
+<#if createInteractor>
     private val interactor: ${moduleName}Interactor,
+</#if>
     private val router: I${moduleName}Router,
     private val errorResolver: ErrorResolver) : AbstractViperPresenter<I${moduleName}View>() {
 

@@ -16,10 +16,12 @@ class ${moduleName}DiffCallback(
     }
 
     override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+        //TODO compare item's ids
         return true
     }
 
     override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+        //TODO compare item's contents
         return true
     }
 }

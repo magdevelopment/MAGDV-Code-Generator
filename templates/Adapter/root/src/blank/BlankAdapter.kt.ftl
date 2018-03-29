@@ -12,7 +12,7 @@ import org.jetbrains.anko.sdk15.listeners.onClick
 
 class ${moduleName}Adapter(private val onClick: ((${modelName}) -> Unit)? = null) : RecyclerView.Adapter<${moduleName}Adapter.ViewHolder>() {
 
-    private var dataSet = mutableListOf<${modelName}>()
+    private var dataSet = emptyList<${modelName}>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_${modelNameLowerCase}, parent, false)
@@ -31,7 +31,7 @@ class ${moduleName}Adapter(private val onClick: ((${modelName}) -> Unit)? = null
         val diffUtilCallback = ${moduleName}DiffCallback(this.dataSet, data)
         val diffResult = DiffUtil.calculateDiff(diffUtilCallback)
 
-        dataSet = data.toMutableList()
+        dataSet = data.toList()
         diffResult.dispatchUpdatesTo(this)
     }
 

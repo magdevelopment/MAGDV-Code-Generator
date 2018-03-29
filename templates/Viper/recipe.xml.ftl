@@ -36,7 +36,11 @@
 	<instantiate from="root/src/blank/IBlankRouter.kt.ftl"
                  to="${escapeXmlAttribute(srcOut)}/${subPackage}/I${moduleName}Router.kt" />
 
-  <instantiate from="root/src/blank/BlankInteractor.kt.ftl"
-                 to="${escapeXmlAttribute(srcOut)}/${subPackage}/${moduleName}Interactor.kt" />
+ <#if createInteractor>
+
+   <instantiate from="root/src/blank/BlankInteractor.kt.ftl"
+                  to="${escapeXmlAttribute(srcOut)}/${subPackage}/${moduleName}Interactor.kt" />
+
+ </#if>
 
 </recipe>

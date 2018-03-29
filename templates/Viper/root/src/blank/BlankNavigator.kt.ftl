@@ -10,9 +10,9 @@ import javax.inject.Inject
 
 class ${moduleName}Navigator @Inject constructor(activity: ${moduleName}Activity) : BaseNavigator(activity, R.id.content) {
 
-    override fun createIntent(context: Context, screenName: String, transferData: Any?): Intent? {
-        return when (screenName) {
-            else -> null
+    override fun createActivityIntent(context: Context, screenKey: String, data: Any?): Intent? {
+        return when (screenKey) {
+            else -> super.createActivityIntent(context, screenKey, data)
         }
     }
 

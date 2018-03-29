@@ -16,6 +16,13 @@
         help="The name of the module to create" />
 
     <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp"/>
+
+    <parameter
         id="subPackage"
         name="Sub package"
         type="string"
@@ -35,7 +42,19 @@
         <option id="dialog">DialogFragment</option>
     </parameter>
 
+    <parameter
+        id="createInteractor"
+        name="Create Interactor"
+        type="boolean"
+        default="true"
+        help="Add interactor" >
+    </parameter>
+
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />
+
+    <thumbs>
+        <thumb>template_thumbnail.png</thumb>
+    </thumbs>
 
 </template>
