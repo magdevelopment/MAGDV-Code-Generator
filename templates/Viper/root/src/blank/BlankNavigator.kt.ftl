@@ -7,7 +7,6 @@ import ${applicationPackage}.R
 import ${applicationPackage}.presentation.common.BaseNavigator
 import javax.inject.Inject
 
-
 class ${moduleName}Navigator @Inject constructor(activity: ${moduleName}Activity) : BaseNavigator(activity, R.id.content) {
 
     override fun createActivityIntent(context: Context, screenKey: String, data: Any?): Intent? {

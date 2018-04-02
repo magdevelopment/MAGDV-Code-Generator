@@ -5,7 +5,6 @@ import dagger.Binds
 import dagger.Module
 import dagger.Provides
 
-
 @Module(includes = arrayOf(${moduleName}Module.Declarations::class))
 class ${moduleName}Module {
 

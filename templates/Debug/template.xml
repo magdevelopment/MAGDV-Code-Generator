@@ -2,8 +2,8 @@
 <template
     format="5"
     revision="1"
-    name="Viper"
-    description="Creates a new Viper module">
+    name="Debug"
+    description="Debuging template creation">
 
     <category value="MAGDV" />
 
@@ -20,6 +20,12 @@
         name="Package name"
         type="string"
         constraints="package"/>
+
+    <parameter
+        id="applicationPackage"
+        name="Application Package"
+        type="String"
+        constraints="app_package"/>
 
     <parameter
         id="subPackage"
@@ -51,9 +57,5 @@
 
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />
-
-    <thumbs>
-        <thumb>template_thumbnail.png</thumb>
-    </thumbs>
 
 </template>

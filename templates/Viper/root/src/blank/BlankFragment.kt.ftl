@@ -9,10 +9,11 @@ import ${applicationPackage}.R
 import ${applicationPackage}.presentation.common.Layout
 import ${applicationPackage}.presentation.common.viper.AbstractViperFragment
 
-//TODO Don't forget to register in ActivityModule
 @Layout(R.layout.fragment)
 class ${moduleName}Fragment : AbstractViperFragment<${moduleName}Presenter>(),
                               I${moduleName}View {
+
+    //TODO Don't forget to register in ActivityModule
 
     @InjectPresenter
     lateinit var presenter: ${moduleName}Presenter

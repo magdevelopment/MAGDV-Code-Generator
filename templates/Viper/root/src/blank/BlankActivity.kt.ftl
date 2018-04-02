@@ -9,10 +9,11 @@ import ${applicationPackage}.presentation.common.Layout
 import ${applicationPackage}.presentation.common.viper.AbstractViperActivity
 import org.jetbrains.anko.intentFor
 
-//TODO Don't forget to register in AndroidManifest and in ActivityBinderModule
 @Layout(R.layout.activity_base)
 class ${moduleName}Activity : AbstractViperActivity<${moduleName}Presenter, ${moduleName}Navigator>(),
                       I${moduleName}View {
+
+    //TODO Don't forget to register in AndroidManifest and in ActivityBinderModule
 
     @InjectPresenter
     override lateinit var presenter: ${moduleName}Presenter

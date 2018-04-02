@@ -2,7 +2,6 @@ package ${packageName}
 
 import android.support.v7.util.DiffUtil
 
-
 class ${moduleName}DiffCallback(
     private val oldList: List<${modelName}>,
     private val newList: List<${modelName}>) : DiffUtil.Callback() {

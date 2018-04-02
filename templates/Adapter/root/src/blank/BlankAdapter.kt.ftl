@@ -9,7 +9,6 @@ import ${applicationPackage}.R
 import kotlinx.android.extensions.LayoutContainer
 import org.jetbrains.anko.sdk15.listeners.onClick
 
-
 class ${moduleName}Adapter(private val onClick: ((${modelName}) -> Unit)? = null) : RecyclerView.Adapter<${moduleName}Adapter.ViewHolder>() {
 
     private var dataSet = emptyList<${modelName}>()

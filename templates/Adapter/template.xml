@@ -11,7 +11,7 @@
         id="moduleName"
         name="Module Name"
         type="string"
-        constraints="nonempty|class|unique"
+        constraints="nonempty|class"
 		    default="Blank"
         help="The name of the module" />
 

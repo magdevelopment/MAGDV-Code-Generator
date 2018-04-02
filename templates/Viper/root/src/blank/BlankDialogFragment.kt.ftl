@@ -9,10 +9,11 @@ import ${applicationPackage}.R
 import ${applicationPackage}.presentation.common.Layout
 import ${applicationPackage}.presentation.common.viper.AbstractViperDialogFragment
 
-//TODO Don't forget to register in ActivityModule
 @Layout(R.layout.dialog)
 class ${moduleName}DialogFragment : AbstractViperDialogFragment<${moduleName}Presenter>(),
                                     I${moduleName}View {
+
+    //TODO Don't forget to register in ActivityModule
 
     @InjectPresenter
     lateinit var presenter: ${moduleName}Presenter
