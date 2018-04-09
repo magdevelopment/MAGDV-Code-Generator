@@ -23,7 +23,7 @@ class ${moduleName}Fragment : AbstractViperFragment<${moduleName}Presenter>(),
         return presenterProvider.get()
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews()
     }

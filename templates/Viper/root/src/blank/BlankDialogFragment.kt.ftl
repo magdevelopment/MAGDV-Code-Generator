@@ -23,7 +23,7 @@ class ${moduleName}DialogFragment : AbstractViperDialogFragment<${moduleName}Pre
         return presenterProvider.get()
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews()
     }
