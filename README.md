@@ -1,20 +1,32 @@
 # MAG Development Templates
 
+#### Установка
 
-#### Install
+Скопируйте содержимое папки **templates** в **ANDROID_STUDIO_DIR\plugins\android\lib\templates\other\**
 
-Copy folders from templates folder into **ANDROID_STUDIO_DIR\plugins\android\lib\templates\other\\**
+или:
+* для MacOS:
+  * запустите **install_templates.sh**
+* для Windows:
+  * создайте файл **settings.ini**
+  * запишите в файл **settings.ini** полный путь до папки с AS _(например, **C:\Soft\Android Studio 3.2\android-studio**)_
+  * сохраните и запустите **intall.bat**
 
-or
+#### Использование
+##### Viper Module
+1. Нажмите правой кнопкой мыши на пакет, в котором будет создан модуль _(например, **presentation**)_
+1. Далее выберите **New ➡️ MAGDV ➡️ Viper**
+1. Появится форма, в которой необходимо заполнить параметры:
+  * Module Name - Название модуля в CamelCase
+  * Package Name - показывает в какой папке будет создан модуль
+  * Sub package - в какой подпапке будет создан модуль
+  * View - можно выбрать какого класса будет View компонент
+  * Create interactor - флаг для создания класса интерактора
+  * Source Language - в какой директории лежат исходники _(srcDir)_, **java или kotlin**
 
-MacOS:
-* run **install_templates.sh**
-
-Windows:
-* create **settings.ini** file
-* put into **settings.ini** a full path to Android Studio _(e.g. C:\Soft\Android Studio 3.1\android-studio)_
-* run **intall.bat**
-
-#### Templates using
-
-Click your ROOT package and then press right button, then select new -> MAGDV -> ...
+##### RecyclerView's Adapter
+1. Нажмите правой кнопкой мыши на пакет, в котором будет создан adapter _(например, **presentation/localitylist**)_
+1. Далее выберите **New ➡️ MAGDV ➡️ RecyclerView's Adapter**
+1. Появится форма, в которой необходимо заполнить параметры:
+  * Module Name - Название модуля в CamelCase _(например, **LocalityList**)_
+  * Model Class - Название класса отображаемой модели _(например, **Locality**)_
