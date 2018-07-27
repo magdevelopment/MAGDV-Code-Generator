@@ -1,4 +1,4 @@
-# MAG Development Templates
+# Шаблоны MAGDV Android
 
 #### Установка
 
