@@ -1,23 +1,18 @@
 package ${packageName}.${subPackage}
 
-import com.arellomobile.mvp.InjectViewState
-import ${applicationPackage}.infrastructure.errors.ErrorResolver
-<#if viewType == "activity">
-import ${applicationPackage}.infrastructure.injection.ActivityScope
-<#else>
-import ${applicationPackage}.infrastructure.injection.FragmentScope
-</#if>
-import ${applicationPackage}.presentation.common.viper.AbstractViperPresenter
+import ${applicationPackage}.presentation.common.RxPresenter
+import ${applicationPackage}.presentation.common.errors.ErrorResolver
+import moxy.InjectViewState
 import javax.inject.Inject
 
-@<#if viewType == "activity">ActivityScope<#else>FragmentScope</#if>
 @InjectViewState
 class ${moduleName}Presenter @Inject constructor(
 <#if createInteractor>
     private val interactor: ${moduleName}Interactor,
 </#if>
-    private val router: I${moduleName}Router,
-    private val errorResolver: ErrorResolver) : AbstractViperPresenter<I${moduleName}View>() {
+    private val router: ${moduleName}Router,
+    private val errorResolver: ErrorResolver
+) : RxPresenter<${moduleName}View>() {
 
     override fun onFirstViewAttach() {
 

@@ -1,22 +1,22 @@
 package ${packageName}.${subPackage}
 
-import ${applicationPackage}.presentation.common.IBaseView
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
 
-@Module(includes = arrayOf(${moduleName}Module.Declarations::class))
-class ${moduleName}Module {
+@Module
+abstract class ${moduleName}Module {
 
-    @Provides
-    fun provide${moduleName}View(presenter: ${moduleName}Presenter): IBaseView {
-        return presenter.viewState
-    }
+    @Binds
+    abstract fun bindRouter(impl: ${moduleName}RouterImpl): ${moduleName}Router
 
     @Module
-    interface Declarations {
+    companion object {
 
-        @Binds
-        fun bind${moduleName}Router(router: ${moduleName}Router): I${moduleName}Router
+        @Provides
+        @JvmStatic
+        fun provideExample(): Int {
+            return 0
+        }
     }
 }

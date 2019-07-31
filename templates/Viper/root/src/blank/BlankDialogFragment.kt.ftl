@@ -1,19 +1,19 @@
 package ${packageName}.${subPackage}
 
 import android.os.Bundle
-import android.support.v4.app.DialogFragment
 import android.view.View
-import com.arellomobile.mvp.presenter.InjectPresenter
-import com.arellomobile.mvp.presenter.ProvidePresenter
+import androidx.fragment.app.DialogFragment
 import ${applicationPackage}.R
-import ${applicationPackage}.presentation.common.Layout
-import ${applicationPackage}.presentation.common.viper.AbstractViperDialogFragment
+import ${applicationPackage}.presentation.common.MvpDialogFragment
+import moxy.presenter.InjectPresenter
+import moxy.presenter.ProvidePresenter
 
-@Layout(R.layout.dialog)
-class ${moduleName}DialogFragment : AbstractViperDialogFragment<${moduleName}Presenter>(),
-                                    I${moduleName}View {
+class ${moduleName}DialogFragment : MvpDialogFragment<${moduleName}Presenter>(),
+                                    ${moduleName}View {
 
-    //TODO Don't forget to register in ActivityModule
+    //TODO Don't forget to register in FragmentModule
+
+    override val layoutRes: Int = R.layout.fragment
 
     @InjectPresenter
     lateinit var presenter: ${moduleName}Presenter
@@ -33,8 +33,7 @@ class ${moduleName}DialogFragment : AbstractViperDialogFragment<${moduleName}Pre
     }
 
     companion object {
-        //TODO Provide Dialog TAG
-        const val TAG = ""
+        const val TAG = TODO Provide Dialog TAG
 
         fun newInstance(): DialogFragment {
             return ${moduleName}DialogFragment()

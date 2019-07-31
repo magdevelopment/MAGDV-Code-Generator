@@ -1,19 +1,19 @@
 package ${packageName}.${subPackage}
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.View
-import com.arellomobile.mvp.presenter.InjectPresenter
-import com.arellomobile.mvp.presenter.ProvidePresenter
+import androidx.fragment.app.Fragment
 import ${applicationPackage}.R
-import ${applicationPackage}.presentation.common.Layout
-import ${applicationPackage}.presentation.common.viper.AbstractViperFragment
+import ${applicationPackage}.presentation.common.MvpFragment
+import moxy.presenter.InjectPresenter
+import moxy.presenter.ProvidePresenter
 
-@Layout(R.layout.fragment)
-class ${moduleName}Fragment : AbstractViperFragment<${moduleName}Presenter>(),
-                              I${moduleName}View {
+class ${moduleName}Fragment : MvpFragment<${moduleName}Presenter>(),
+                              ${moduleName}View {
 
-    //TODO Don't forget to register in ActivityModule
+    //TODO Don't forget to register in FragmentBindingModule
+
+    override val layoutRes: Int = R.layout.fragment
 
     @InjectPresenter
     lateinit var presenter: ${moduleName}Presenter
