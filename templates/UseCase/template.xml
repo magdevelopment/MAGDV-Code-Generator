@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="1"
+    name="UseCase"
+    description="Creates a new UseCase">
+
+    <category value="MAGDV" />
+
+    <parameter
+        id="usecase_name"
+        name="UseCase Name"
+        type="string"
+        constraints="nonempty|class"
+		    default="Blank"
+        help="The name of the use case" />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
