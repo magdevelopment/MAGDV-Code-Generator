@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="1"
+    name="Scenario"
+    description="Creates a new Scenario">
+
+    <category value="MAGDV" />
+
+    <parameter
+        id="scenario_name"
+        name="Scenario Name"
+        type="string"
+        constraints="nonempty|class"
+		    default="Blank"
+        help="The name of the scenario" />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
